@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 27px;
+}
+
+header {
+  background-color: #222;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #ff5500;
+}
+
+.container {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 50px 20px;
+  background-color: #9e9393;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ff5500;
+  text-align: center;
+}
+
+.workout-details {
+  margin-bottom: 30px;
+}
+
+.workout-details h2 {
+  font-size: 24px;
+  color: #ff5500;
+  margin-bottom: 10px;
+}
+
+#exercises-list {
+  margin-bottom: 20px;
+}
+
+.exercise-item {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.exercise-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.exercise-item .exercise-name {
+  font-size: 30px;
+  color: #ff5500;
+  margin-bottom: 5px;
+}
+
+.exercise-item .exercise-description {
+  font-size: 500px;
+  color: #777;
+}
+
+#timer {
+  font-size: 32px;
+  color: #ff5500;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#finish-button {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.7em 2em;
+  border: 3px solid #ff5500;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  color: #ff5500;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+#finish-button:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #ff5500;
+  z-index: -1;
+}
+
+#finish-button:hover,
+#finish-button:focus {
+  color: white;
+}
+
+#finish-button:hover:before,
+#finish-button:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+#finish-button:active {
+  transform: scale(0.9);
+}
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+footer a {
+  color: #ff5500;
+  text-decoration: none;
+}
+/* Style the exercise amount input */
+.exercise-item input[type="number"] {
+  font-size: 16px;
+  padding: 5px 10px;
+  width: 60px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.exercise-item input[type="number"]:focus {
+  outline: none;
+  border-color: #ff5500;
+}
+
+.exercise-item input[type="number"]::-webkit-inner-spin-button,
+.exercise-item input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.exercise-item input[type="number"]::-webkit-input-placeholder {
+  color: #aaa;
+}
+
+.exercise-item input[type="number"]::-moz-placeholder {
+  color: #aaa;
+}
+
+.exercise-item input[type="number"]:-ms-input-placeholder {
+  color: #aaa;
+}
+
+.exercise-item input[type="number"]::placeholder {
+  color: #aaa;
+}

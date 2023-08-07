@@ -1,0 +1,119 @@
+/* credit to patet */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+header {
+  background-color: #222;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #ff5500;
+}
+
+h1 {
+  font-size: 36px;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.settings-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.settings-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+#save-settings-button {
+  background: #ff5500;
+  border: none;
+  padding: 15px 25px;
+  font-size: 15px;
+  font-weight: 600;
+  width: 125px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transform: skew(-21deg);
+  display: block;
+  margin: 20px auto 0;
+}
+
+span {
+  display: inline-block;
+  transform: skew(21deg);
+}
+
+#save-settings-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  left: 0;
+  background: rgb(20, 20, 20);
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+#save-settings-button:hover {
+  color: #fff;
+}
+
+#save-settings-button:hover::before {
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
